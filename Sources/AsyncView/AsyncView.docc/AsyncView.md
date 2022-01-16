@@ -1,11 +1,10 @@
-# AsyncView
+# ``AsyncView``
 
-A SwiftUI view that asynchronously loads and displays its content,
-similar to [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage).
+A view that asynchronously loads and displays its content.
 
-## Usage
+## Overview
 
-`AsyncView` asynchronously loads and displays its content and while the load operation
+``AsyncView`` asynchronously loads and displays its content and while the load operation
 is in progress it displays a placeholder that fills the available space.
 
 For example:
@@ -22,8 +21,8 @@ AsyncView { () -> String in
 }
 ```
 
-To gain more control over the loading process, you can use the initializer which takes a `content` closure
-that receives an `AsyncViewPhase` to indicate the state of the loading operation:
+To gain more control over the loading process, you can use the ``AsyncView/init(task:transaction:content:)`` initializer,
+which takes a `content` closure that receives an ``AsyncViewPhase`` to indicate the state of the loading operation:
 
 ```swift
 AsyncView { () -> String in
